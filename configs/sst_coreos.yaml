@@ -1,0 +1,37 @@
+document: feedback-pipeline-workload
+version: 1
+data:
+  name: CoreOS
+  description: >
+    OS compontents for CoreOS based systems.
+    This should be distributed via ostrees.
+  maintainer: sst_rhcos
+
+  packages:
+   # These packages are currently built and released as part of
+   # OpenShift 4 (RHCOS).  In the future we may create ELN CoreOS,
+   # see https://github.com/coreos/fedora-coreos-config/pull/712
+   - afterburn
+   - afterburn-dracut
+   - coreos-installer
+   - ignition
+   - runc
+   - ssh-key-dir
+   - zincati
+   - bootupd
+
+   # These packages are inherited from the base
+   - cloud-utils-growpart
+   - console-login-helper-messages-issuegen
+   - console-login-helper-messages-motdgen
+   - console-login-helper-messages-profile
+   - ostree
+   - podman
+   - rpm-ostree
+   - skopeo
+   - systemd-container
+   - toolbox
+
+## Do not re-enable in eln without Josh Boyers permission
+#  labels:
+#  - eln

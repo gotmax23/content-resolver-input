@@ -1,0 +1,34 @@
+document: feedback-pipeline-workload
+version: 1
+data:
+  name: Backup tools from CS system management SST
+  description: Packages for backup and restoration of the operating system from CS system management SST
+  maintainer: sst_cs_system_management
+
+  packages:
+  - amanda
+  - amanda-client
+  - bacula-client
+  - bacula-console
+  - libburn
+  - libburn-devel
+  - libisoburn
+  - libisoburn-devel
+  - libisoburn-doc
+  - libisofs
+  - libisofs-devel
+  - libisofs-doc
+  - xorriso
+
+  arch_packages:
+    #rear not yet supported on s390x and arm
+
+    x86_64:
+    - rear
+
+    ppc64le:
+    - rear
+
+  labels:
+  - eln
+  - c9s
